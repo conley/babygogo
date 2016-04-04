@@ -37,14 +37,14 @@ class Source(metaclass=abc.ABCMeta):
             logger.warn('Received element with no attached stream.  Discarding.')
 
 
-class ListSource(Source):
+class IterableSource(Source):
 
-    def __init__(self, lst):
+    def __init__(self, itr):
         super().__init__()
-        self.__list = lst
+        self.__itr = itr
 
     def start(self):
-        for e in self.__list:
+        for e in self.__itr:
             self._stream.process(e)
 
 
