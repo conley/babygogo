@@ -45,7 +45,7 @@ class IterableSource(Source):
 
     def start(self):
         for e in self.__itr:
-            self._stream.process(e)
+            self._process(e)
 
 
 class KafkaSource(Source):
