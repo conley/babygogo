@@ -150,8 +150,8 @@ class Joiner(Filter):
     first element is the key and the second is the value.
 
     Since the two incoming streams cannot be assumed to be synchronized, it is not possible to
-    predict if a certain element from one stream will even be joined by another.   To avoid
-    accumulating data in memory indefinitely, a maximum size can be define for the internal cache
+    predict if a certain element from one stream will ever be joined by another.   To avoid
+    accumulating data in memory indefinitely, a maximum size can be defined for the internal cache
     of the Joiner.  This is given by the 'max_size' constructor argument
     """
 
